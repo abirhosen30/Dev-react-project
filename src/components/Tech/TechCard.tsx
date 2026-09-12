@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import type { ITechnology } from "../../assets/Type/Type";
+import { toast } from "react-toastify";
 
 const TechCard = ({ tech }: ITechnology) => {
+    const [isSelceted, setIsSelected] = useState(false)
+
+    const handleSelectedtech = () => {
+        if (isSelceted === false) {
+            toast.success(`${tech.name} is added to stack`);
+            setIsSelected(true);
+        }
+    }
   return (
     <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
       <div className="flex items-start justify-between">
@@ -35,8 +44,8 @@ const TechCard = ({ tech }: ITechnology) => {
         </span>
       </div>
 
-      <button className="mt-7 w-full rounded-xl bg-slate-950 py-4 text-xl text-white transition hover:bg-slate-800">
-        Add to Stack
+      <button onClick={() => handleSelectedtech()} className="mt-7 w-full rounded-xl bg-slate-950 py-4 text-xl text-white " disabled={isSelceted === true ? true : false}>
+        {isSelceted === true ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
