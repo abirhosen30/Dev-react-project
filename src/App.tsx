@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import ExploreTech from "./components/Tech/Tech";
 import type { ITechnology } from "./assets/Type/Type";
+import Footer from "./components/Footer";
 
 const techFetch = async (): Promise<ITechnology[]> => {
   const res = await fetch("/data.json");
@@ -20,6 +21,7 @@ function App() {
       <Suspense fallback={<p>Loading...</p>}>
         <ExploreTech  techPromise={techPromise} ></ExploreTech>
       </Suspense>
+      <Footer />
     </>
   );
 }
