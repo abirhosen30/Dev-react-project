@@ -75,7 +75,7 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }: TechCardProps) => {
               : "bg-slate-950 hover:bg-slate-800"
           }`}
         >
-          {isSelected ? "Added to Stack" : "Add to Stack"}
+          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>

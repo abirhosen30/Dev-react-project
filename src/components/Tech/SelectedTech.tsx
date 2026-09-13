@@ -33,16 +33,21 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
         Selected Yet
       </p>
 
-      {/* Selected technologies */}
-      <div className="mt-6 space-y-4">
-        {selectedTech.map((tech) => (
-          <SelectedTechCard
-            key={tech.id}
-            tech={tech}
-            handleRemove={handleRemove}
-          />
-        ))}
-      </div>
+      {selectedTech.length === 0 ? (
+        <div className="mt-6 rounded-xl border-2 border-slate-200 px-2 py-2 md:px-4 md:py-10 text-center md:-ml-2">
+          <p className="text-[12px] text-slate-400">Your stack is empty.</p>
+        </div>
+      ) : (
+        <div className="mt-6 space-y-4 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-sm">
+          {selectedTech.map((tech) => (
+            <SelectedTechCard
+              key={tech.id}
+              tech={tech}
+              handleRemove={handleRemove}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

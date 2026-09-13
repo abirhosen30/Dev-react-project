@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-1 hidden md:block">
             <h3 className="text-xs font-bold text-slate-800">PRODUCT</h3>
 
             <ul className="mt-4 space-y-2 text-sm text-slate-400">
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-1 hidden md:block">
             <h3 className="text-xs font-bold text-slate-800">COMPANY</h3>
 
             <ul className="mt-4 space-y-2 text-sm text-slate-400">
@@ -84,7 +84,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-1 hidden md:block">
             <h3 className="text-xs font-bold text-slate-800">LEGAL</h3>
 
             <ul className="mt-4 space-y-2 text-sm text-slate-400">
@@ -106,7 +106,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="my-7 border-t border-slate-100"></div>
 
-        <div className="flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex justify-between  gap-3 text-sm text-slate-400 md:flex-row items-center">
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
           <ul className="flex gap-6">
