@@ -1,4 +1,3 @@
-import React from 'react';
 import type { ITechnology } from '../../assets/Type/Type';
 
 const SelectedTechCard = ({ tech, handleRemove }: { tech: ITechnology; handleRemove: (id: string) => void }) => {
