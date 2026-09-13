@@ -20,8 +20,8 @@ const ExploreTech = ({
   }>;
 
   return (
-    <div className="flex justify-between gap-10 mt-6">
-      <div className="grid grid-cols-3 gap-7 mt-6">
+    <div className="md:flex grid container mx-auto  md:justify-between md:gap-10 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-7 mt-6">
         {teches.map((tech: ITechnology) => {
           return (
             <TechCard
