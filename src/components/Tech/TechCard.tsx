@@ -31,9 +31,9 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }: TechCardProps) => {
   };
   return (
     <div>
-      <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+      <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-3 shadow-sm mb-10">
         <div className="flex items-start justify-between">
-          <img src={tech.icon} alt={tech.name} className="h-12 w-12" />
+          <img src={tech.icon} alt={tech.name} className="h-8 w-8" />
 
           <span className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-lg text-emerald-600">
             {tech.badge}
@@ -41,9 +41,9 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }: TechCardProps) => {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-3xl font-bold text-slate-900">{tech.name}</h2>
+          <h2 className="text-xl font-bold text-slate-900">{tech.name}</h2>
 
-          <p className="mt-4 text-lg leading-8 text-slate-500">
+          <p className="mt-2 text-[12px] leading-5 text-slate-500">
             {tech.description}
           </p>
         </div>
@@ -51,11 +51,11 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }: TechCardProps) => {
         <div className="my-6 border-t border-slate-100"></div>
 
         <div className="flex items-center justify-between">
-          <span className="rounded-lg bg-slate-100 px-3 py-1.5 text-lg text-slate-600">
+          <span className="rounded-lg bg-slate-100 px-2.5 py-1 text-[12px] text-slate-600">
             {tech.category}
           </span>
 
-          <span className="text-lg text-slate-500">{tech.difficulty}</span>
+          <span className="text-[12px] text-slate-500">{tech.difficulty}</span>
 
           <span className="flex items-center gap-1 text-lg font-semibold text-slate-700">
             <span className="text-yellow-400">★</span>
@@ -65,7 +65,7 @@ const TechCard = ({ tech, selectedTech, setSelectedTech }: TechCardProps) => {
 
         <button
           onClick={() => handleSelectedtech()}
-          className="mt-7 w-full rounded-xl bg-slate-950 py-4 text-xl text-white "
+          className="mt-7 w-full rounded-xl bg-slate-950 py-2 text-[10px] text-white "
           disabled={isSelceted === true ? true : false}
         >
           {isSelceted === true ? "Added to Stack" : "Add to Stack"}
