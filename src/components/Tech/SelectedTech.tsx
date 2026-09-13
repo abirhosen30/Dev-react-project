@@ -22,6 +22,16 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
     }
   };
 
+  const handleRemoveAll = () => {
+    if (selectedTech.length === 0) return;
+
+    setSelectedTech([]);
+
+    toast.info("All technologies removed from stack!", {
+      position: "bottom-right",
+    });
+  };
+
   return (
     <div className="w-full min-w-[350px] border-l border-slate-200 pl-8">
       {/* Heading */}
@@ -46,6 +56,12 @@ const SelectedTech = ({ selectedTech, setSelectedTech }: SelectedTechProps) => {
               handleRemove={handleRemove}
             />
           ))}
+          <button
+            onClick={handleRemoveAll}
+            className="mt-4 self-start rounded-lg border border-red-500 bg-red-100 px-6 py-2 text-sm font-medium text-red-500 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+          >
+            Remove All
+          </button>
         </div>
       )}
     </div>
