@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
   return (
-    <div className="container mx-auto flex items-center justify-between mt-5 pb-3 sticky top-0 z-50 bg-white">
+    <div className="container mx-auto flex items-center  justify-around md:justify-between mt-5 pb-3 sticky top-0 z-50 bg-white">
       <RxHamburgerMenu className="md:hidden" />
       <div>
         <img src={logo} alt="" className="h-8 w-auto sm:h-9" />
